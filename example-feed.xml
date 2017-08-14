@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Playlist Radio</title>
+    <link></link> <!-- Link to Playlist Radio -->
+    <description>Facebook Instant Articles feed for playlist from Playlist Radio</description>
+    <item> <!-- Each item tag corresponds to a new playlist -->
+      <title><![CDATA[Playlist Title]]></title>
+      <content:encoded>  <!-- Send full article.html after inserting data inside CDATA tag-->
+      <![CDATA[
+        <!doctype html>
+        <html lang="en" prefix="op: http://media.facebook.com/op#">
+        <head>
+          <meta charset="utf-8">  
+          <link rel="canonical" href="">
+          <meta property="op:markup_version" content="v1.0">
+        </head>
+        <body>
+          <article>
+            <header>
+              <figure>
+                <img src="" />
+              </figure>
+              <h1></h1>
+              <h2> 
+                <a href="">iTunes</a>|<a href="">Spotify</a>|<a href="">Tidal</a>|<a href="">Amazon</a>|<a href="">Google</a>|<a href="">Youtube</a>
+              </h2>
+              <time class="op-published" datetime=""></time>   
+            </header>
+            <p>Song List</p>
+            <ol>
+              <li>Song Title</li>
+              <li>Song Title</li>
+            </ol>
+          </article>
+        </body>
+        </html>
+      ]]>
+      </content:encoded>
+    </item>
+    <item> <!-- Next playlist -->
+      <content:encoded><![CDATA[Next Playlist Content]]></content:encoded> 
+    </item>
+  </channel>
+</rss>
