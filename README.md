@@ -10,26 +10,27 @@ You need to insert this meta tag into the Playlist Radio head tag
 <meta property="fb:pages" content="109592009722217" />
 ```
 
+
 ## Facebook Instant Articles HTML Markup
 
 For Facebook Instant Articles, you need to update an RSS feed with specific HTML for the article.
 I have created the exact HTML code you need to insert data into and then push along to the RSS feed. You will find it in the article.html file in this repo. The code is commented to show what data needs to be added and where, but I will also lay it out below.
 
 **Data to be added in each HTML snippet before sending off**
-1. URL to Playlist on Playlist Radio --> Add into href attribute of <link> inside the <head>
-2. URL to Playlist Cover Image --> Add into src attribute of <img>
-3. Text Name of Playlist --> Add into <h1>
-4. URL for each 3rd Party Playlist --> Add into respective href of <a> with corresponding name (i.e. iTunes, Spotify, etc.)
-5. Text of Song List --> Add a new <li> for each song name / artist inside the <ol>
+1. URL to Playlist on Playlist Radio --> Add into href attribute of **link** tag inside the **head** tag
+2. URL to Playlist Cover Image --> Add into src attribute of **img** tag
+3. Text Name of Playlist --> Add into **h1** tag
+4. URL for each 3rd Party Playlist --> Add into respective href of **a** tag with corresponding name (i.e. iTunes, Spotify, etc.)
+5. Text of Song List --> Add a new **li** tag for each song name / artist inside the **ol** tag
+
 
 ## Creating RSS Feed
 
-I have created an example of this using the [Feed](https://www.npmjs.com/package/feed) package in Node.js
-You can check it out [here](https://github.com/mwhitcom/rss-facebook-test).
+I have created an example of this using the [Feed](https://www.npmjs.com/package/feed) package in Node.js, which you can check out [here](https://github.com/mwhitcom/rss-facebook-test).
 
-There is also an example of how the RSS xml file should look when outputed. Basically you put the entire HTML snippet once data has been added into <content:encoded>.
+There is also an example of how the RSS xml file should look when outputed. Basically you put the entire HTML snippet once data has been added into the **content:encoded** tag.
 
-**Essentially this is the flow:**
+**This is the flow**
 1. HTML snippet in article.html is stored in a varible on server side
 2. Playlist is created on front end and data is dynamically added into HTML snippet
 3. HTML snippet is then sent into function that creates and updates RSS feed
